@@ -1,0 +1,17 @@
+{
+  "name": "ractive-react-riot-redux-counters-example",
+  "version": "1.0.0",
+  "description": "Ractive React Riot & Redux Counters Example",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drewmiley/ractive-react-riot-redux-counters-example.git"
+  },
+  "author": "drewmiley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drewmiley/ractive-react-riot-redux-counters-example/issues"
+  },
+  "homepage": "https://github.com/drewmiley/ractive-react-riot-redux-counters-example#readme"
+}
