@@ -13,12 +13,12 @@ npm start
 ## Folder structure
 
 	+-- ractive
-	|	+-- app.html
-	|	+-- app.js
+	|	app.html
+	|	app.js
 	|	+-- components
-	|	|	+-- NameInput.js
+	|	|	NameInput.js
 	|	|	+-- views
-	|	|	|	+-- name-input.html
+	|	|	|	name-input.html
 	+-- react
 	|	AppContainer.jsx
 	|	index.jsx
@@ -26,7 +26,7 @@ npm start
 	|	|	NameInput.jsx
 	+-- riot
 	|	main.js
-	|	riot-app.tsg
+	|	riot-app.tag
 	|	+-- tags
 	|	|	name-input.tag
 
