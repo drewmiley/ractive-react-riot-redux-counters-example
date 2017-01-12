@@ -7,7 +7,10 @@ module.exports = {
 	entry: [
 		'webpack-dev-server/client?http://localhost:8080',
 		'webpack/hot/only-dev-server',
-		'./src/ractive/app.js'
+		// Ractive
+		// './src/ractive/app.js'
+		// React
+		'./src/react/index.jsx'
 	],
 	module: {
 		loaders: [{
@@ -17,6 +20,11 @@ module.exports = {
 			query: {
 				presets: ['es2015']
 			}
+		}, {
+			test: /\.jsx?$/,
+			exclude: /node_modules/,
+			loader: 'babel',
+			query: { presets: ['es2015', 'react'] }
 		}, {
 			test: /\.html$/,
 			exclude: '/node_modules/',
@@ -36,6 +44,9 @@ module.exports = {
 		path: __dirname + '/dist',
 		publicPath: '/',
 		filename: 'bundle.js'
+	},
+	resolve: {
+		extensions: ['', '.js', '.jsx', '.html', '.tag']
 	},
 	devServer: {
 		contentBase: './dist',

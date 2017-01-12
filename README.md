@@ -19,6 +19,11 @@ npm start
 	|	|	+-- NameInput.js
 	|	|	+-- views
 	|	|	|	+-- name-input.html
+	+-- react
+	|	AppContainer.jsx
+	|	index.jsx
+	|	+-- components
+	|	|	NameInput.jsx
 
 ## Deploying the app
 
