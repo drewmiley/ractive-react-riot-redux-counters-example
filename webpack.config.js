@@ -1,4 +1,4 @@
-var webpack = require('webpack');
+const webpack = require('webpack');
 
 module.exports = {  
 	cache: true,
@@ -10,11 +10,19 @@ module.exports = {
 		// Ractive
 		// './src/ractive/app.js'
 		// React
-		'./src/react/index.jsx'
+		// './src/react/index.jsx'
+		// Riot
+		'./src/riot/main.js'
 	],
 	module: {
+		preLoaders: [{
+			test: /\.tag$/,
+			exclude: /node_modules/,
+			loader: 'riotjs',
+			query: { type: 'none' }
+		}],
 		loaders: [{
-			test: /\.js?$/,
+			test: /\.js|tag$/,
 			exclude: /node_modules/,
 			loader: 'babel',
 			query: {
@@ -28,17 +36,17 @@ module.exports = {
 		}, {
 			test: /\.html$/,
 			exclude: '/node_modules/',
-			loader: 'raw'
+			loader: 'html'
 		}, {
 			test: /\.css$/,
 			exclude: '/node_modules/',
-			loader: 'style-loader!css-loader'
+			loader: 'style!css'
 		},
 		{ test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/font-woff' },
 		{ test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream' },
 		{ test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file' },
 		{ test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml' },
-		{ test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/, loader : 'file-loader' }]
+		{ test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/, loader : 'file' }]
 	},
 	output: {
 		path: __dirname + '/dist',
@@ -46,13 +54,14 @@ module.exports = {
 		filename: 'bundle.js'
 	},
 	resolve: {
-		extensions: ['', '.js', '.jsx', '.html', '.tag']
+		extensions: ['', '.js', '.jsx', '.tag']
 	},
 	devServer: {
 		contentBase: './dist',
 		hot: true
 	},
 	plugins: [
-		new webpack.HotModuleReplacementPlugin()
+		new webpack.HotModuleReplacementPlugin(),
+		new webpack.ProvidePlugin({riot: 'riot'})
 	]
 };

@@ -24,6 +24,11 @@ npm start
 	|	index.jsx
 	|	+-- components
 	|	|	NameInput.jsx
+	+-- riot
+	|	main.js
+	|	riot-app.tsg
+	|	+-- tags
+	|	|	name-input.tag
 
 ## Deploying the app
 
