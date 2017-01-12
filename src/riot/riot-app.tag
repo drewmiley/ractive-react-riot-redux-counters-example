@@ -4,7 +4,7 @@ import './tags/name-input';
 	<div class='container'>
 		<name-input value={'Drew'} />
 		<p>
-			Name: Drew
+			Riot: Drew
 		</p>
 	</div>
 

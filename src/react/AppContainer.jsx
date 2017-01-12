@@ -7,7 +7,7 @@ class App extends Component {
 		return <div className='container'>
 			<NameInput value='Drew' />
 			<p>
-				Name: Drew
+				React: Drew
 			</p>
 		</div>
 	};

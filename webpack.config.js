@@ -8,9 +8,9 @@ module.exports = {
 		'webpack-dev-server/client?http://localhost:8080',
 		'webpack/hot/only-dev-server',
 		// Ractive
-		// './src/ractive/app.js'
+		'./src/ractive/app.js',
 		// React
-		// './src/react/index.jsx'
+		'./src/react/index.jsx',
 		// Riot
 		'./src/riot/main.js'
 	],

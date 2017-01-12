@@ -1,3 +1,4 @@
 dist/bundle.js
 dist/bundle.js.map
 node_modules/
+npm-debug.log
