@@ -2,7 +2,9 @@
   "name": "ractive-react-riot-redux-counters-example",
   "version": "1.0.0",
   "description": "Ractive React Riot & Redux Counters Example",
-  "scripts": {},
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/drewmiley/ractive-react-riot-redux-counters-example.git"
@@ -12,5 +14,31 @@
   "bugs": {
     "url": "https://github.com/drewmiley/ractive-react-riot-redux-counters-example/issues"
   },
-  "homepage": "https://github.com/drewmiley/ractive-react-riot-redux-counters-example#readme"
+  "homepage": "https://github.com/drewmiley/ractive-react-riot-redux-counters-example#readme",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "bootstrap": "^3.3.7",
+    "classnames": "^2.2.5",
+    "css-loader": "^0.26.1",
+    "file-loader": "^0.9.0",
+    "html-loader": "^0.4.4",
+    "immutable": "^3.8.1",
+    "ractive": "^0.8.9",
+    "raw-loader": "^0.5.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-hot-loader": "^1.3.1",
+    "react-redux": "^5.0.2",
+    "redux": "^3.6.0",
+    "riot": "^3.0.7",
+    "riotjs-loader": "^3.0.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  }
 }
