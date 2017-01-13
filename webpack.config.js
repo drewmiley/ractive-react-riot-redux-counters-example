@@ -8,13 +8,13 @@ module.exports = {
 		'webpack-dev-server/client?http://localhost:8080',
 		'webpack/hot/only-dev-server',
 		// Redux
-		'./src/redux/store.js',
+		'./src/redux/store',
 		// Ractive
-		'./src/ractive/app.js',
+		'./src/ractive/app',
 		// React
-		'./src/react/index.jsx',
+		'./src/react/index',
 		// Riot
-		'./src/riot/main.js'
+		'./src/riot/main'
 	],
 	module: {
 		preLoaders: [{
