@@ -2,9 +2,9 @@ import { Map } from 'immutable';
 
 // Actions
 
-export const SET_STATE = 'rrrr/SET_STATE';
-export const INCREMENT = 'rrrr/INCREMENT';
-export const DECREMENT = 'rrrr/DECREMENT';
+const SET_STATE = 'rrrr/SET_STATE';
+const INCREMENT = 'rrrr/INCREMENT';
+const DECREMENT = 'rrrr/DECREMENT';
 
 // Action Creators
 
@@ -31,17 +31,17 @@ export const decrement = framework => {
 
 // Reducer
 
-const setState = (state, newState) => {
+const SetState = (state, newState) => {
 	return state.mergeDeep(newState);
 };
 
-const increment = (state, framework) => {
+const Increment = (state, framework) => {
 	console.log(framework);
 	console.log('+1');
 	return state;
 };
 
-const decrement = (state, framework) => {
+const Decrement = (state, framework) => {
 	console.log(framework);
 	console.log('-1');
 	return state;
@@ -50,11 +50,11 @@ const decrement = (state, framework) => {
 export default (state = Map(), action) => {
 	switch (action.type) {
 		case SET_STATE:
-			return setState(state, action.state);
+			return SetState(state, action.state);
 		case INCREMENT:
-			return increment(state, action.framework);
+			return Increment(state, action.framework);
 		case DECREMENT:
-			return decrement(state, action.framework);
+			return Decrement(state, action.framework);
 		default:
 			return state;
 	};

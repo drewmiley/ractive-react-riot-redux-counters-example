@@ -29,6 +29,7 @@ npm start
 	|	|	EventButton.jsx
 	+-- redux
 	|	counters.js
+	|	store.js
 	+-- riot
 	|	main.js
 	|	riot-app.tag
