@@ -1,6 +1,35 @@
 import { Map } from 'immutable';
 
-import * as actions from '../constants/actions';
+// Actions
+
+export const SET_STATE = 'rrrr/SET_STATE';
+export const INCREMENT = 'rrrr/INCREMENT';
+export const DECREMENT = 'rrrr/DECREMENT';
+
+// Action Creators
+
+export const setState = state => {
+	return {
+		type: SET_STATE,
+		state
+	};
+};
+
+export const increment = framework => {
+	return {
+		type: INCREMENT,
+		framework
+	};
+};
+
+export const decrement = framework => {
+	return {
+		type: DECREMENT,
+		framework
+	};
+};
+
+// Reducer
 
 const setState = (state, newState) => {
 	return state.mergeDeep(newState);
@@ -20,11 +49,11 @@ const decrement = (state, framework) => {
 
 export default (state = Map(), action) => {
 	switch (action.type) {
-		case actions.SET_STATE:
+		case SET_STATE:
 			return setState(state, action.state);
-		case actions.INCREMENT:
+		case INCREMENT:
 			return increment(state, action.framework);
-		case actions.DECREMENT:
+		case DECREMENT:
 			return decrement(state, action.framework);
 		default:
 			return state;

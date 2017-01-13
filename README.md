@@ -12,10 +12,6 @@ npm start
 
 ## Folder structure
 
-	+-- actions
-	|	counters.js
-	+-- constants
-	|	actions.js
 	+-- ractive
 	|	app.html
 	|	app.js
@@ -28,7 +24,7 @@ npm start
 	|	index.jsx
 	|	+-- components
 	|	|	NameInput.jsx
-	+-- reducers
+	+-- redux
 	|	counters.js
 	+-- riot
 	|	main.js
