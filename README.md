@@ -16,9 +16,11 @@ npm start
 	|	app.html
 	|	app.js
 	|	+-- components
-	|	|	NameInput.js
+	|	|	CounterLabel.js
+	|	|	EventButton.js
 	|	|	+-- views
-	|	|	|	name-input.html
+	|	|	|	counter-label.html
+	|	|	|	event-button.html
 	+-- react
 	|	AppContainer.jsx
 	|	index.jsx

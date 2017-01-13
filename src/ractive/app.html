@@ -1,6 +1,24 @@
-<div class='container'>
-	<NameInput value='{{name}}' />
-	<p>
-		Ractive: {{name}}
-	</p>
+<div class='panel panel-default'>
+	<div class='panel-heading'>
+		<h3 class='panel-title'>Ractive</h3>
+	</div>
+	<div class='panel-body'>
+		<EventButton
+			event=undefined
+			display='Ractive +' />
+		<EventButton
+			event=undefined
+			display='Ractive -' />
+	</div>
+	<div class='panel-footer'>
+		<CounterLabel
+			label='Ractive'
+			value='0' />
+		<CounterLabel
+			label='React'
+			value='0' />
+		<CounterLabel
+			label='Riot'
+			value='0' />
+	</div>
 </div>

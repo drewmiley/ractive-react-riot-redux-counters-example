@@ -4,17 +4,17 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 import template from './app.html';
 
-import NameInput from './components/NameInput';
+import CounterLabel from './components/CounterLabel';
+import EventButton from './components/EventButton';
 
 let App = new Ractive({  
 	el: '#ractive',
 	template,
 	components: {
-		NameInput
+		CounterLabel,
+		EventButton
 	},
-	data: {
-		name: 'Drew'
-	}
+	data: {}
 });
 
 export default App;
