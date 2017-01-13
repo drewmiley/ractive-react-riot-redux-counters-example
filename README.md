@@ -23,7 +23,8 @@ npm start
 	|	AppContainer.jsx
 	|	index.jsx
 	|	+-- components
-	|	|	NameInput.jsx
+	|	|	CounterLabel.jsx
+	|	|	EventButton.jsx
 	+-- redux
 	|	counters.js
 	+-- riot

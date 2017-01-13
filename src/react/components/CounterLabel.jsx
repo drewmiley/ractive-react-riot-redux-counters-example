@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class NameInput extends Component {
+export default class CounterLabel extends Component {
 	constructor(props) {
 		super(props);
 		this.shouldComponentUpdate = (nextProps, nextState) => {
@@ -8,6 +8,6 @@ export default class NameInput extends Component {
 		};
 	};
 	render() {
-		return <input type='text' value={this.props.value} />
+		return <p className='h2'>{this.props.label}: {this.props.value}</p>
 	};
 };
