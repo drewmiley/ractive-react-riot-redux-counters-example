@@ -31,7 +31,8 @@ npm start
 	|	main.js
 	|	riot-app.tag
 	|	+-- tags
-	|	|	name-input.tag
+	|	|	counter-label.tag
+	|	|	event-button.tag
 
 ## Deploying the app
 
