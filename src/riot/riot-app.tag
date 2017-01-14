@@ -16,19 +16,24 @@ import './tags/event-button';
 				display={'Riot -'} />
 		</div>
 		<div class='panel-footer'>
-			<counter-label
-				label={'Ractive'}
-				value={0} />
-			<counter-label
-				label={'React'}
-				value={0} />
-			<counter-label
-				label={'Riot'}
-				value={0} />
+            <div each={state.frameworkScores}>
+            	<counter-label
+            		label={name}
+            		value={score} />
+            </div>
 		</div>
 	</div>
 
 	<script>
+
+		let store = this.opts.store;
+
+		this.state = store.getState().toJS();
+
+		store.subscribe(() => {
+			this.state = store.getState().toJS();
+			this.update();
+		});
 
 	</script>
 
