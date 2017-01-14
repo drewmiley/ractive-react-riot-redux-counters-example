@@ -4,7 +4,7 @@
   "description": "Ractive React Riot & Redux Counters Example",
   "scripts": {
     "start": "webpack-dev-server",
-    "test": "eslint src/**/*.js"
+    "test": "eslint src/**/*.js src/**/*.jsx src/**/*.tag"
   },
   "repository": {
     "type": "git",
