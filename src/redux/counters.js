@@ -36,15 +36,19 @@ const SetState = (state, newState) => {
 };
 
 const Increment = (state, framework) => {
-	console.log(framework);
-	console.log('+1');
-	return state;
+	return state.updateIn([
+		'frameworkScores',
+		state.get('frameworkScores').findIndex(frameworkScore => frameworkScore.get('name') === framework),
+		'score'
+	], score => score + 1);
 };
 
 const Decrement = (state, framework) => {
-	console.log(framework);
-	console.log('-1');
-	return state;
+	return state.updateIn([
+		'frameworkScores',
+		state.get('frameworkScores').findIndex(frameworkScore => frameworkScore.get('name') === framework),
+		'score'
+	], score => score - 1);
 };
 
 export default (state = Map(), action) => {
