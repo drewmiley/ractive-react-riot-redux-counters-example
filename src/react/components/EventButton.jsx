@@ -10,8 +10,8 @@ export default class EventButton extends Component {
 	render() {
 		return <button
 			className='btn btn-default'
-			onClick={(e) => { console.log(this.props.display) }}>
-			{this.props.display}
+			onClick={() => { this.props.event(this.props.framework) }}>
+			{this.props.framework} {this.props.display}
 		</button>
 	};
 };
