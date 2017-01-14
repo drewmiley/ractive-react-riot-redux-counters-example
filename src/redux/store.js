@@ -26,6 +26,4 @@ const initialState = Map({
 
 store.dispatch(setState(initialState));
 
-console.log(store.getState());
-
 export default store;
