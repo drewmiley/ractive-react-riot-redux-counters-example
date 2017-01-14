@@ -23,6 +23,7 @@ class App extends Component {
 			<div className='panel-footer'>
 				{this.props.frameworkScores.map(framework =>
 					<CounterLabel
+						key={framework.get('name')}
 						label={framework.get('name')}
 						value={framework.get('score')} />
 				)}
