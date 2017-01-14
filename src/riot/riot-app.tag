@@ -5,7 +5,7 @@ import './tags/event-button';
 
 	<div class='panel panel-default'>
 		<div class='panel-heading'>
-			<h3 class='panel-title'>Riot</h3>
+			<h3 class='panel-title'>{this.opts.framework}</h3>
 		</div>
 		<div class='panel-body'>
 			<event-button
