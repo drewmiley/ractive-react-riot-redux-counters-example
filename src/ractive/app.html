@@ -11,14 +11,10 @@
 			display='Ractive -' />
 	</div>
 	<div class='panel-footer'>
-		<CounterLabel
-			label='Ractive'
-			value='0' />
-		<CounterLabel
-			label='React'
-			value='0' />
-		<CounterLabel
-			label='Riot'
-			value='0' />
+		{{#each state.frameworkScores}}
+			<CounterLabel
+				label={{name}}
+				value={{score}} />
+		{{/each}}
 	</div>
 </div>

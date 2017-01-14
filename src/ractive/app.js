@@ -7,14 +7,21 @@ import template from './app.html';
 import CounterLabel from './components/CounterLabel';
 import EventButton from './components/EventButton';
 
-let App = new Ractive({  
-	el: '#ractive',
-	template,
-	components: {
-		CounterLabel,
-		EventButton
-	},
-	data: {}
-});
+import store from '../redux/store';
 
-export default App;
+let render = () => {
+	new Ractive({  
+		el: '#ractive',
+		template,
+		components: {
+			CounterLabel,
+			EventButton
+		},
+		data: {
+			state: store.getState().toJS()
+		}
+	});
+};
+
+store.subscribe(render);
+render();
