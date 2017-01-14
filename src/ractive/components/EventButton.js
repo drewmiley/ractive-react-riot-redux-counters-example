@@ -4,8 +4,8 @@ import template from './views/event-button.html';
 
 let EventButton = Ractive.extend({
 	template,
-	click: display => {
-		console.log(display);
+	click: function(action) {
+		this.fire('click', action);
 	}
 });
 

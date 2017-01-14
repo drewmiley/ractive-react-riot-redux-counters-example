@@ -1,17 +1,19 @@
 <div class='panel panel-default'>
 	<div class='panel-heading'>
-		<h3 class='panel-title'>Ractive</h3>
+		<h3 class='panel-title'>{{framework}}</h3>
 	</div>
 	<div class='panel-body'>
 		<EventButton
-			event=undefined
-			display='Ractive +' />
+			action={{actionCreators.increment}}
+			framework={{framework}}
+			display='+' />
 		<EventButton
-			event=undefined
-			display='Ractive -' />
+			action={{actionCreators.decrement}}
+			framework={{framework}}
+			display='-' />
 	</div>
 	<div class='panel-footer'>
-		{{#each state.frameworkScores}}
+		{{#each store.getState().toJS().frameworkScores}}
 			<CounterLabel
 				label={{name}}
 				value={{score}} />

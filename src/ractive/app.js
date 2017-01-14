@@ -7,6 +7,7 @@ import template from './app.html';
 import CounterLabel from './components/CounterLabel';
 import EventButton from './components/EventButton';
 
+import * as actionCreators from '../redux/counters';
 import store from '../redux/store';
 
 let render = () => {
@@ -18,7 +19,13 @@ let render = () => {
 			EventButton
 		},
 		data: {
-			state: store.getState().toJS()
+			framework: 'Ractive',
+			store,
+			actionCreators
+		}
+	}).on({
+		'EventButton.click': (action) => {
+			store.dispatch(action);
 		}
 	});
 };
