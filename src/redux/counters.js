@@ -61,6 +61,5 @@ export default (state = Map(), action) => {
 			return Decrement(state, action.framework);
 		default:
 			return state;
-	};
-	return state;
+	}
 };

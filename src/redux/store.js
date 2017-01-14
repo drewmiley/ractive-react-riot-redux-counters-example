@@ -1,6 +1,6 @@
 import {
-    List,
-    Map
+	List,
+	Map
 } from 'immutable';
 import {
 	compose,
@@ -11,17 +11,17 @@ import { setState } from './counters';
 import reducer from './counters';
 
 const createStoreDevTools = compose(
-    window.devToolsExtension ? window.devToolsExtension() : f => f
+	window.devToolsExtension ? window.devToolsExtension() : f => f
 )(createStore);
 
 const store = createStoreDevTools(reducer);
 
 const initialState = Map({
-    frameworkScores: List([
-        Map({ name: 'Ractive', score: 0 }),
-        Map({ name: 'React', score: 0 }),
-        Map({ name: 'Riot', score: 0})
-    ])
+	frameworkScores: List([
+		Map({ name: 'Ractive', score: 0 }),
+		Map({ name: 'React', score: 0 }),
+		Map({ name: 'Riot', score: 0})
+	])
 });
 
 store.dispatch(setState(initialState));
