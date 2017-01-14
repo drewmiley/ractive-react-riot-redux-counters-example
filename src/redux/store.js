@@ -7,7 +7,7 @@ import {
 	createStore
 } from 'redux';
 
-import * as actions from './counters';
+import { setState } from './counters';
 import reducer from './counters';
 
 const createStoreDevTools = compose(
@@ -24,7 +24,7 @@ const initialState = Map({
     ])
 });
 
-store.dispatch(actions.setState(initialState));
+store.dispatch(setState(initialState));
 
 console.log(store.getState());
 

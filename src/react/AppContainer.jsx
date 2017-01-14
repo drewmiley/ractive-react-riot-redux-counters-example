@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+import * as actionCreators from '../redux/counters';
 
 import CounterLabel from './components/CounterLabel';
 import EventButton from './components/EventButton';
@@ -18,18 +21,20 @@ class App extends Component {
 					display='React -' />
 			</div>
 			<div className='panel-footer'>
-				<CounterLabel
-					label='Ractive'
-					value='0' />
-				<CounterLabel
-					label='React'
-					value='0' />
-				<CounterLabel
-					label='Riot'
-					value='0' />
+				{this.props.frameworkScores.map(framework =>
+					<CounterLabel
+						label={framework.get('name')}
+						value={framework.get('score')} />
+				)}
 			</div>
 		</div>
 	};
 };
 
-export default App;
+const mapStateToProps = state => {
+	return {
+		frameworkScores: state.get('frameworkScores')
+	};
+};
+
+export default connect(mapStateToProps, actionCreators)(App);
