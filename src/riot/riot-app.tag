@@ -9,11 +9,13 @@ import './tags/event-button';
 		</div>
 		<div class='panel-body'>
 			<event-button
-				event={undefined}
-				display={'Riot +'} />
+				event={increment}
+				framework={this.opts.framework}
+				display={'+'} />
 			<event-button
-				event={undefined}
-				display={'Riot -'} />
+				event={decrement}
+				framework={this.opts.framework}
+				display={'-'} />
 		</div>
 		<div class='panel-footer'>
             <div each={state.frameworkScores}>
@@ -34,6 +36,16 @@ import './tags/event-button';
 			this.state = store.getState().toJS();
 			this.update();
 		});
+
+		const actionCreators = this.opts.actionCreators;
+
+		this.increment = (framework) => {
+			store.dispatch(actionCreators.increment(framework));
+		};
+
+		this.decrement = (framework) => {
+			store.dispatch(actionCreators.decrement(framework));
+		};
 
 	</script>
 
