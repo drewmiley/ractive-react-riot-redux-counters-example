@@ -16,7 +16,13 @@ const createStoreDevTools = compose(
 
 const store = createStoreDevTools(reducer);
 
-const initialState = Map({});
+const initialState = Map({
+    frameworkScores: List([
+        Map({ name: 'Ractive', score: -1 }),
+        Map({ name: 'React', score: 0 }),
+        Map({ name: 'Riot', score: 2})
+    ])
+});
 
 store.dispatch(actions.setState(initialState));
 
