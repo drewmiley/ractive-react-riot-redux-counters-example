@@ -18,9 +18,9 @@ const store = createStoreDevTools(reducer);
 
 const initialState = Map({
     frameworkScores: List([
-        Map({ name: 'Ractive', score: -1 }),
+        Map({ name: 'Ractive', score: 0 }),
         Map({ name: 'React', score: 0 }),
-        Map({ name: 'Riot', score: 2})
+        Map({ name: 'Riot', score: 0})
     ])
 });
 
