@@ -15,7 +15,8 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "riot"
     ],
     "rules": {
         "indent": [
